@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #010D26;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left-side {
+  flex: 1;
+  background-image: url('../assets/fondo.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.right-side {
+  flex: 1;
+  background-color: #206A73;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 250px;
+}
+
+.login-card {
+  background-color: transparent;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  color: white;
+}
+
+.login-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #d3d3d3;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #bbbbbb;
+}
