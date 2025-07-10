@@ -6,7 +6,7 @@ export const DEVICE_ID_CONST = '9ebe5340-47a3-11f0-a76f-af9873efe2ab';
 
 let jwtToken = null;
 
-// 🔐 Login con credenciales de ThingsBoard (admin)
+// Login
 export const loginToThingsBoard = async (username, password) => {
   const response = await axios.post(`${API_URL}/auth/login`, {
     username,
@@ -17,7 +17,6 @@ export const loginToThingsBoard = async (username, password) => {
   return jwtToken;
 };
 
-// 🔍 Obtener telemetría histórica o última usando JWT
 export const getTelemetry = async (deviceId, keys) => {
   if (!jwtToken) throw new Error('No autenticado en ThingsBoard');
 
@@ -31,10 +30,8 @@ export const getTelemetry = async (deviceId, keys) => {
   return response.data;
 };
 
-// 🔐 Verifica si hay token guardado
 export const isAuthenticated = () => !!jwtToken;
 
-// ✅ Enviar atributos al dispositivo REAL usando token del dispositivo (NO usa JWT)
 export const postAttribute = async (data) => {
   return axios.post(
     `http://iot.ceisufro.cl:8080/api/v1/${DEVICE_TOKEN}/attributes`,

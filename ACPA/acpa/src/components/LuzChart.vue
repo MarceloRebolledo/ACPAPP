@@ -33,7 +33,6 @@ const props = defineProps({
   values: Array
 })
 
-// ⚠️ Aquí está el cambio importante
 const chartData = computed(() => ({
   labels: props.labels,
   datasets: [
